@@ -146,3 +146,39 @@ available. Later implementation and accepted-state captures are authentic.
 
 Featured Work's visual/project presentation enhancement is deliberately deferred
 in enhancements.md. No future case-study page is included in this release.
+
+## Deployment cache correction, 2026-10-07
+
+Initial technical checks and fresh-session verification after deployment passed,
+and Work reported the deployed site as matching the accepted source. Human
+screenshots from a returning browser subsequently showed stale styling (missing
+How I Work principles grid, dark Experience cards, and the 3+2 layout), so that
+visual acceptance failed despite the earlier passing checks. The technical
+measurements remain historical evidence; the broad production-match claim was
+not justified and is withdrawn pending corrected visual acceptance.
+
+Diagnosis: HEAD, origin/main, the local working tree, and a fresh fetch of the
+production `styles.css` all hashed to the same SHA256
+(`e2302f371adbe8c1ab2cddfd21ed7878b296a90bc5fd8cfedee959a441e50fde`), and
+Cloudflare Pages had successfully deployed commit `b1697d9` with the correct
+bytes. The root HTML response revalidates on every request (`max-age=0`), but
+the unversioned `styles.css` request was served with `max-age=14400`, letting a
+returning browser reuse a stale cached copy of the old baseline CSS (missing
+the principles grid, dark cards, and six-track Experience layout) for up to 4
+hours without revalidating, consistent with the reported screenshots. The
+affected human browser's actual cached bytes were not directly inspectable;
+that is an inference from headers/hash evidence, not a confirmed byte-for-byte
+reproduction of what that browser held.
+
+Correction: `index.html`'s stylesheet reference changed from `styles.css` to
+`styles.css?v=e2302f371adbe8c1`, changing the browser cache key without
+changing any CSS bytes, content, design, section order, palette, layout,
+spacing, or dependencies. This uses the existing Cloudflare Pages integration;
+no deployment configuration was changed.
+
+Going forward, any future CSS change must update this version token to a new
+content hash, and verification of a deployed change must include a visible
+screenshot comparison against the previously accepted reference plus explicit
+returning-browser/cache behavior, before a broad "deployed successfully" claim
+is made. Human verification of this correction after deployment remains
+pending; Work handles authorized deployment and that verification.
