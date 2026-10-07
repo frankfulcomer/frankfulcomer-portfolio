@@ -1,11 +1,18 @@
 # Portfolio enhancement backlog
 
-These enhancements are beyond v0.1. The v0.1 responsive-design and browser
-acceptance requirements in PRODUCT.md remain release requirements.
+Active Portfolio work is tracked in GitHub Issues and the **Engineering Work**
+GitHub Project. This file preserves the rationale and scope boundaries that led
+to the current backlog; it is not a second task list.
+
+Current tracked enhancements:
+
+- [#1 — Build reusable cross-browser and responsive acceptance suite](https://github.com/frankfulcomer/frankfulcomer-portfolio/issues/1)
+- [#2 — Improve Featured Work visual and project presentation](https://github.com/frankfulcomer/frankfulcomer-portfolio/issues/2)
+
+Use the Engineering Work project for current status, product classification, and
+priority.
 
 ## Reusable cross-browser / responsive acceptance suite
-
-Status: proposed; defer implementation until after v0.1.
 
 Create a small Python/Pytest + Playwright acceptance suite that runs headless
 for routine validation and headed when Frank wants to watch execution.
@@ -33,10 +40,7 @@ checks, explicit headed/headless selection, and a concise result report.
 Defer CI, screenshot baselines, elaborate fixtures, and broader accessibility
 or security programs until they address a demonstrated need.
 
-
 ## Featured Work visual/project presentation
-
-Status: deliberately deferred after the accepted 2026-10-07 episode.
 
 Make the projects more visually compelling and easier to understand before a
 visitor opens GitHub, potentially through representative screenshots and clearer
