@@ -119,12 +119,6 @@ central, while AI assists with implementation, analysis, review,
 documentation, and testing. AI is presented pragmatically as an engineering
 tool, not as a replacement for human judgment.
 
-Meaningful source-code implementation should normally be routed through
-Conductor/Claude, with Work acting as orchestrator and reviewer. Work may
-directly inspect, validate, review, and maintain appropriate documentation.
-Use the established launcher with the live viewer enabled for delegated work;
-independently review changes and validation evidence afterward.
-
 ## Provenance & private records
 
 Significant development-session transcripts and AI provenance are retained

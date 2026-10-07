@@ -32,16 +32,3 @@ Right-sized first increment: a local server, a few meaningful acceptance
 checks, explicit headed/headless selection, and a concise result report.
 Defer CI, screenshot baselines, elaborate fixtures, and broader accessibility
 or security programs until they address a demonstrated need.
-
-## Work usage warnings and interruption checkpoints
-
-Status: proposed workflow enhancement; not a v0.1 site blocker.
-
-Work reached its platform usage limit during release preparation. Existing
-Conductor usage-awareness does not prevent exhaustion of Work's own platform quota.
-Recognize visible Work usage/rate-limit warnings when available. When remaining
-usage appears constrained, checkpoint current state and pending approvals before
-starting substantial new work; defer a non-urgent phase likely to be interrupted.
-After interruption, verify repository and provenance state before resuming and
-never assume an interrupted operation completed. Do not invent, estimate, or
-bypass unavailable platform quota information.

@@ -77,3 +77,16 @@ A reusable headed/headless acceptance suite is deferred in enhancements.md.
 Detailed Work/Conductor/Claude provenance remains private outside the repository.
 Testing is accepted as sufficient for v0.1. Commit and push/deployment remain
 separate human approval checkpoints; this record authorizes none of them.
+
+## Release-preparation history
+
+ChatGPT Work's platform usage limit interrupted release preparation. Before
+resuming, repository and private provenance state were inspected to establish
+which operations had completed; outstanding documentation work was then finished.
+
+This cycle included Conductor/Claude implementation and a later read-only review
+of the three Back to top links through the Windows/WSL live-viewer launcher.
+Work also made the small Back to top source refinements before Frank clarified
+the implementation-routing boundary, and independently reviewed and validated
+the resulting site. Detailed run evidence remains private. General orchestration
+policy and usage-preflight enhancements belong to ai-development-workflow.
