@@ -1,4 +1,4 @@
-# Portfolio v0.1 validation
+# Portfolio validation
 
 ## Support boundary and approach
 
@@ -11,7 +11,7 @@ plus content-driven breakpoint boundaries and exploratory resizing between
 and below those widths. Include 200% browser zoom/reflow where practical.
 Requirements and intended browser support are defined in PRODUCT.md.
 
-## Automated and static evidence
+## Original v0.1 evidence, 2026-10-06
 
 Local in-app browser viewport checks passed at all five representative
 widths without horizontal page scrolling. Additional checks around layout
@@ -24,7 +24,7 @@ anchor targets, unique IDs, external-link attributes, asset paths, and
 Person structured data. Standards-based CSS review found no required
 mainstream-browser fallback. Assets loaded locally without reported failures.
 
-All three Back to top links were checked for keyboard activation to #top,
+The original three Back to top links were checked for keyboard activation to #top,
 visible 2px focus outlines, 44px target height, and responsive fit at the five
 representative widths. The hero returned to the top of the viewport.
 
@@ -57,7 +57,7 @@ a specific regression risk.
   added Back to top link on 2026-10-06.
 - Edge acceptance identified the same need after the Experience cards.
 - Frank agreed to the shared pattern and requested consistency in Featured
-  Work and Experience. All three sections now link to #top using the same
+  Work and Experience. The original three sections were updated to link to #top using the same
   understated styling, keyboard focus, and 44px target treatment.
 - These links are minimally important on desktop, but sections grow much
   taller when content reflows on narrow displays. Consistent return navigation
@@ -90,3 +90,59 @@ Work also made the small Back to top source refinements before Frank clarified
 the implementation-routing boundary, and independently reviewed and validated
 the resulting site. Detailed run evidence remains private. General orchestration
 policy and usage-preflight enhancements belong to ai-development-workflow.
+
+## Hero / How I Work / Experience episode, 2026-10-07
+
+### Accepted result
+
+Frank accepted the final content and visual state before requesting closeout.
+The page order is Hero → How I Work → AI-Assisted Engineering → Featured Work
+→ Experience → footer. Backgrounds are white, pale gray, dark, pale gray, dark,
+and pale gray respectively. The temporary How I Work divider was removed because
+the adjacent dark section provides the boundary.
+
+The hero presents broader professional positioning. How I Work contains six
+engineering principles. Experience contains exactly five approved dimensions:
+Software Quality, Systems & Requirements, Software Implementation, Test Automation,
+and Communication. Its equal-width desktop cards form a centered 3+2 layout;
+intermediate widths use 2+2+1 with the fifth centered; narrow widths stack all five.
+Content determined the layout; no filler dimension was added. Existing card styling,
+navigation and section spacing are preserved.
+
+### Final validation
+
+Independent recommended HTML validation, CSS parsing/supported-property checks,
+exact approved-copy checks, unique IDs, valid internal anchors, preserved external
+link attributes, and Git whitespace checks passed. CSS custom properties were
+verified through computed styles where the static property checker lacks support.
+
+Rendered checks cover 320, 375, 768, 1024 and 1440 CSS px, supplemented by checks
+at 600/601, 680/681 and 1100/1101 breakpoint boundaries during implementation.
+Equal card widths, centered final rows, readable wrapping, no page/card overflow,
+section order and accepted content were verified. Established content-to-heading
+gaps remain 144px above 680px and 96px at narrow widths; internal How I Work
+spacing is unchanged. Desktop/tablet/narrow visual evidence is retained privately.
+
+All four Back to top links preserve #top navigation, keyboard semantics, visible
+focus treatment and 44px minimum targets. GitHub, LinkedIn, Email and project-link
+destinations remain intentional; email checks do not send messages. Skip navigation,
+heading structure, accessible section labels, portrait alternative text and the
+existing reduced-motion behavior are preserved. The reused dark palette has
+approximately 15.4:1 heading and 7.0:1 paragraph contrast on its dark background.
+
+Viewport emulation supplements human acceptance in external browser tabs. This
+episode does not claim new physical-device, Safari/iOS/Android, per-browser or
+actual 200% zoom acceptance beyond the earlier recorded evidence.
+
+### Evidence and scope
+
+Implementation assignments, Claude/Conductor provenance, available user-facing
+conversation pages, independent reviews, measurements and meaningful visual states
+remain private outside version control. Detailed revision history was retained
+there before this closeout summary replaced repetitive provisional entries.
+The original before screenshots were later reconstructed partial captures, not a
+contemporaneous complete visual baseline; the original committed source remains
+available. Later implementation and accepted-state captures are authentic.
+
+Featured Work's visual/project presentation enhancement is deliberately deferred
+in enhancements.md. No future case-study page is included in this release.

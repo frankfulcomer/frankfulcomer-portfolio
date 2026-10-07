@@ -32,3 +32,13 @@ Right-sized first increment: a local server, a few meaningful acceptance
 checks, explicit headed/headless selection, and a concise result report.
 Defer CI, screenshot baselines, elaborate fixtures, and broader accessibility
 or security programs until they address a demonstrated need.
+
+
+## Featured Work visual/project presentation
+
+Status: deliberately deferred after the accepted 2026-10-07 episode.
+
+Make the projects more visually compelling and easier to understand before a
+visitor opens GitHub, potentially through representative screenshots and clearer
+project presentation. Preserve the current accepted Featured Work until a separate
+episode establishes its scope and design.

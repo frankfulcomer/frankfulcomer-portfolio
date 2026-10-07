@@ -6,11 +6,10 @@ and later evolution. It does not specify implementation details.
 
 ## Purpose & audience
 
-The site is a professional portfolio for an experienced Software Quality
-Engineer with substantial real-world QA, system testing, requirements-based
-verification, healthcare software, automation, and implementation experience,
-who is actively developing modern automation and AI-assisted engineering
-skills.
+The site is a professional portfolio for an experienced software professional
+working across software quality, systems, requirements, implementation, automation,
+and communication in healthcare, financial services, and enterprise software.
+That experience is extending into software development and AI-assisted engineering.
 
 Audience: recruiters, hiring managers, engineers, and interviewers. Content
 must present that experience authentically while remaining appropriate for
@@ -37,8 +36,11 @@ More personality may emerge naturally as visitors explore deeper.
   not required for v0.1.
 - Content is authentic without oversharing: "Authentic, edited — not
   manufactured."
-- Avoid generic corporate language, AI hype, and unnecessary first-person
-  repetition.
+- Use plain English; prefer "financial services" to unnecessary industry shorthand.
+  Avoid résumé clichés, inflated claims, generic corporate language, AI hype, and
+  unnecessary first-person repetition.
+- Let meaningful content determine layout. The five Experience dimensions are
+  intentional; do not invent or remove a dimension to satisfy grid symmetry.
 - Featured projects communicate the engineering problem, purpose, approach,
   and evidence — not just a technology list.
 
@@ -55,13 +57,28 @@ More personality may emerge naturally as visitors explore deeper.
 
 ## v0.1 scope
 
-Initial homepage structure:
+Accepted homepage narrative:
 
 - Hero / positioning
-- Featured work
+- How I Work
 - Conductor process
-- Experience
+- Featured work
+- Experience (software quality, systems & requirements, software
+  implementation, test automation, communication)
 - GitHub / LinkedIn / contact navigation
+
+The narrative moves from who I am, to how I work, to how I apply AI-assisted
+engineering, to evidence of the work, and then professional experience. How I Work
+states the six accepted engineering principles explicitly. AI-Assisted Engineering
+and Experience are the two dark visual anchors; the other content sections use
+the existing light palette, and the pale-gray footer closes the page.
+
+Accepted hero descriptor: "Software Quality · Systems · Requirements · Automation".
+
+Accepted supporting copy: "Experienced software professional working across
+software quality, system testing, requirements-based verification, test automation,
+and regulated healthcare software, now extending that experience into software
+development and AI-assisted engineering."
 
 Likely featured projects:
 
