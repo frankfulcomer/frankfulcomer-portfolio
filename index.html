@@ -15,92 +15,245 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <meta name="robots" content="index, follow">
 
-        <script type="application/ld+json">
+    <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Person",
             "name": "Frank Fulcomer",
             "url": "https://frankfulcomer.me/",
+            "image": "https://frankfulcomer.me/favicon.png",
             "sameAs": [
                 "https://github.com/frankfulcomer",
                 "https://www.linkedin.com/in/frankfulcomer/"
             ],
             "jobTitle": "Software Quality & Test Automation Engineer"
         }
-        </script>
+    </script>
 
-        <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <h1>Frank Fulcomer</h1>
-            <p class="title">Software Quality &amp; Test Automation Engineer</p>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-            <p class="intro">
-                Experienced software quality engineer working across system
-                testing, requirements-based verification, test automation,
-                healthcare software, and AI-assisted software development.
-            </p>
+    <header id="top" class="hero">
+        <div class="container hero-inner">
+            <img
+                class="hero-photo"
+                src="favicon.png"
+                alt="Portrait of Frank Fulcomer"
+                width="192"
+                height="192"
+            >
 
-            <nav aria-label="Professional profiles">
-                <a href="https://github.com/frankfulcomer">GitHub</a>
-                <a href="https://www.linkedin.com/in/frankfulcomer/">LinkedIn</a>
-            </nav>
+            <div class="hero-text">
+                <h1>Frank Fulcomer</h1>
+                <p class="title">Software Quality &amp; Test Automation Engineer</p>
+
+                <p class="intro">
+                    Experienced software quality engineer working across
+                    system testing, requirements-based verification,
+                    healthcare software, and test automation &mdash; now
+                    building AI-assisted engineering workflows that keep
+                    human judgment central to the process.
+                </p>
+
+                <nav aria-label="Professional profiles" class="profile-nav">
+                    <a href="https://github.com/frankfulcomer" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/frankfulcomer/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="mailto:frank.fulcomer@gmail.com">Email</a>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <main class="container">
-        <section>
-            <h2>Featured Work</h2>
+    <main id="main">
+        <section id="work" class="section" aria-labelledby="work-heading">
+            <div class="container">
+                <h2 id="work-heading">Featured Work</h2>
+                <p class="section-lede">
+                    Applications and test automation projects demonstrate
+                    software development and verification in practice.
+                </p>
 
-            <article>
-                <h3>Job Search Hub</h3>
-                <p class="technology">Python · Flask · SQLite</p>
-                <p>
-                    Personal career-management application developed using
-                    an AI-assisted software development and quality workflow.
-                </p>
-                <a href="https://github.com/frankfulcomer/job-search-hub">
-                    View on GitHub
-                </a>
-            </article>
+                <div class="project-grid">
+                    <article>
+                        <h3>Job Search Hub</h3>
+                        <p class="technology">Python &middot; Flask &middot; SQLite</p>
+                        <p>
+                            Job searching generates scattered, hard-to-track
+                            data across spreadsheets and job boards. Job
+                            Search Hub is a personal career-management
+                            application &mdash; built using the Conductor
+                            approach &mdash; that centralizes applications,
+                            status, and follow-up in one place.
+                        </p>
+                        <a href="https://github.com/frankfulcomer/job-search-hub" target="_blank" rel="noopener noreferrer">
+                            View Job Search Hub on GitHub
+                        </a>
+                    </article>
 
-            <article>
-                <h3>Job Search Hub Tests</h3>
-                <p class="technology">Python · Selenium · Pytest</p>
-                <p>
-                    Automated system-level testing for Job Search Hub,
-                    covering browser workflows, application behavior,
-                    and persistent data.
-                </p>
-                <a href="https://github.com/frankfulcomer/job-search-hub-tests">
-                    View on GitHub
-                </a>
-            </article>
+                    <article>
+                        <h3>Job Search Hub Tests</h3>
+                        <p class="technology">Python &middot; Selenium &middot; Pytest</p>
+                        <p>
+                            Working software still needs proof it keeps
+                            working. This system-level test suite exercises
+                            Job Search Hub through real browser workflows,
+                            checking application behavior and persisted data
+                            the way a user actually would.
+                        </p>
+                        <a href="https://github.com/frankfulcomer/job-search-hub-tests" target="_blank" rel="noopener noreferrer">
+                            View Job Search Hub Tests on GitHub
+                        </a>
+                    </article>
 
-            <article>
-                <h3>Workflow Tracker</h3>
-                <p class="technology">
-                    Java · Spring Boot · Playwright · REST-Assured · JDBC
+                    <article>
+                        <h3>Workflow Tracker</h3>
+                        <p class="technology">
+                            Java &middot; Spring Boot &middot; Playwright &middot; REST-Assured &middot; JDBC
+                        </p>
+                        <p>
+                            Full-stack applications fail quietly when the
+                            interface, API, and database drift out of sync.
+                            Workflow Tracker is a demonstration application
+                            with automated validation spanning all three
+                            layers, catching inconsistencies a single-layer
+                            test would miss.
+                        </p>
+                        <a href="https://github.com/frankfulcomer/workflow-tracker" target="_blank" rel="noopener noreferrer">
+                            View Workflow Tracker on GitHub
+                        </a>
+                    </article>
+                </div>
+                <p class="back-to-top">
+                    <a href="#top">Back to top</a>
                 </p>
-                <p>
-                    Full-stack demonstration application with automated
-                    validation across the user interface, REST API,
-                    and database layers.
+            </div>
+        </section>
+
+        <section id="conductor" class="section section-dark" aria-labelledby="conductor-heading">
+            <div class="container">
+                <h2 id="conductor-heading">AI-Assisted Engineering</h2>
+                <p class="section-lede">
+                    Conductor is the name I give my AI-assisted engineering
+                    approach &mdash; used to build this site.
                 </p>
-                <a href="https://github.com/frankfulcomer/workflow-tracker">
-                    View on GitHub
-                </a>
-            </article>
+
+                <ol class="process-steps">
+                    <li>
+                        <span class="step-index">01</span>
+                        <h3>Define intent</h3>
+                        <p>
+                            Problem, constraints, and acceptance criteria are
+                            set before any code is written.
+                        </p>
+                    </li>
+                    <li>
+                        <span class="step-index">02</span>
+                        <h3>AI-assisted implementation</h3>
+                        <p>
+                            AI drafts code, tests, and documentation within
+                            those constraints.
+                        </p>
+                    </li>
+                    <li>
+                        <span class="step-index">03</span>
+                        <h3>Engineering review</h3>
+                        <p>
+                            Every change is reviewed for correctness, risk,
+                            and fit before it's accepted.
+                        </p>
+                    </li>
+                    <li>
+                        <span class="step-index">04</span>
+                        <h3>Verification</h3>
+                        <p>
+                            Automated and manual testing confirm the result
+                            actually meets the stated intent.
+                        </p>
+                    </li>
+                </ol>
+
+                <p class="process-note">
+                    Frank remains the conductor &mdash; AI accelerates the
+                    work; judgment, review, and approval don't move.
+                </p>
+                <p class="back-to-top">
+                    <a href="#top">Back to top</a>
+                </p>
+            </div>
+        </section>
+
+        <section id="experience" class="section" aria-labelledby="experience-heading">
+            <div class="container">
+                <h2 id="experience-heading">Experience</h2>
+                <p class="section-lede">
+                    Grounded in regulated, high-stakes environments &mdash;
+                    and evolving with the tools.
+                </p>
+
+                <div class="experience-grid">
+                    <article>
+                        <h3>Healthcare Software Quality</h3>
+                        <p>
+                            Testing and verification work in regulated
+                            healthcare software, where correctness and
+                            traceability carry real consequences.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>System &amp; Requirements-Based Testing</h3>
+                        <p>
+                            Verifying systems against defined requirements
+                            &mdash; connecting test coverage back to what the
+                            software is actually supposed to do.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Test Automation &amp; Implementation</h3>
+                        <p>
+                            Designing and implementing automated test
+                            frameworks across interface, API, and data
+                            layers to catch regressions before they reach
+                            users.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>AI-Assisted Engineering</h3>
+                        <p>
+                            Applying AI deliberately within an engineering
+                            process that keeps human review and judgment
+                            central &mdash; see <a href="#conductor">Conductor</a>.
+                        </p>
+                    </article>
+                </div>
+                <p class="back-to-top">
+                    <a href="#top">Back to top</a>
+                </p>
+            </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>
-                Portfolio currently being expanded.
+        <div class="container footer-inner">
+            <nav aria-label="Footer navigation">
+                <a href="https://github.com/frankfulcomer" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/frankfulcomer/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="mailto:frank.fulcomer@gmail.com">Email</a>
+            </nav>
+            <p class="footer-contact-note">
+                Open to conversations about software quality, test
+                automation, systems testing, and related engineering
+                opportunities. Please no sales, marketing, or unrelated
+                business solicitations.
+            </p>
+            <p class="footer-note">
+                &copy; 2026 Frank Fulcomer. Built with HTML, CSS, and the
+                Conductor approach.
             </p>
         </div>
     </footer>

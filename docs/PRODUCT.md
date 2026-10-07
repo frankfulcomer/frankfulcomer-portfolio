@@ -73,6 +73,42 @@ Likely featured projects:
 Implementation specifics (layout, copy, markup) are intentionally not fixed
 here; this document records direction and constraints, not a spec.
 
+## v0.1 responsive design & browser requirements
+
+Responsive Web Design (RWD) and mainstream browser compatibility are release
+requirements for v0.1, not optional future polish.
+
+- The minimum supported viewport width is 320 CSS pixels. At that width
+  and greater, the site must remain functional, readable, visually coherent,
+  and free of horizontal page-level scrolling across desktop, tablet, and
+  mobile viewports. Layout and content may reflow as necessary. Below
+  320 CSS pixels, graceful degradation is desirable but outside v0.1 scope.
+- Content must reflow naturally within the available width. Project cards,
+  engineering steps, and experience grids must collapse appropriately.
+- Hero text, portrait, profile/contact links, section introductions,
+  engineering steps, experience content, and footer must remain readable
+  and well balanced, with appropriate spacing and readable line lengths.
+- Section introductions may use a wider reading measure, but their width
+  must remain fluid and fit their container at every supported viewport.
+- Supported layouts must avoid horizontal scrolling, clipped content, and
+  overlapping elements, and provide touch-friendly navigation/contact links.
+- Use content-driven breakpoints rather than specific device models.
+  Validate representative widths of approximately 320, 375, 768, 1024, and
+  1440 CSS pixels, breakpoint boundaries, and 200% browser zoom/reflow
+  where practical.
+- Target current Chrome, Microsoft Edge, Firefox, and Safari on desktop,
+  Chrome on Android, and Safari on iOS. Equivalent content, functionality,
+  accessibility, and reasonably consistent presentation are required;
+  pixel-identical rendering is not.
+- Prefer standards-based HTML and CSS. Add compatibility fallbacks or
+  browser-specific adjustments only when an actual supported-browser issue
+  warrants them. Automated checks and viewport emulation supplement rather
+  than replace real-browser and device validation.
+
+Validation evidence and human acceptance results are recorded in
+[validation.md](validation.md). Exploratory resizing supplements the defined
+representative widths; observations below 320 CSS pixels do not expand support.
+
 ## The Conductor process
 
 Conductor is the AI-assisted development process used to build this site
@@ -82,6 +118,12 @@ Conductor keeps human engineering judgment, intent, review, and approval
 central, while AI assists with implementation, analysis, review,
 documentation, and testing. AI is presented pragmatically as an engineering
 tool, not as a replacement for human judgment.
+
+Meaningful source-code implementation should normally be routed through
+Conductor/Claude, with Work acting as orchestrator and reviewer. Work may
+directly inspect, validate, review, and maintain appropriate documentation.
+Use the established launcher with the live viewer enabled for delegated work;
+independently review changes and validation evidence afterward.
 
 ## Provenance & private records
 
