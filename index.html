@@ -96,6 +96,27 @@
 #work .project-card .project-story .story-facts span {
   font-size: .94rem;
 }
+
+/* Give summaries and expanded stories proportional use of card width */
+#work .project-card summary .project-card-intro {
+  max-width: none;
+  padding-right: clamp(1rem, 8vw, 7rem);
+}
+#work .project-card .project-story p {
+  max-width: 100%;
+}
+#work .project-card .project-story > section,
+#work .project-card .project-story .story-facts,
+#work .project-card .project-story .facts,
+#work .project-card .project-story .test-breakdown {
+  max-width: none;
+}
+#work .project-card .project-story > section p {
+  max-width: 100%;
+}
+@media (max-width: 680px) {
+  #work .project-card summary .project-card-intro { padding-right: 0; }
+}
 </style>
 </head>
 
