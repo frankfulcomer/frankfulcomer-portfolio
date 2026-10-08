@@ -67,6 +67,35 @@
 #work .project-evidence span, #work .story-facts span {display:block;color:var(--muted);font-size:.9rem;margin-top:.25rem}
 @media(max-width:600px){#work .project-evidence, #work .story-facts {grid-template-columns:1fr;gap:.8rem}}
 #work .test-breakdown{margin:2rem 0}#work .test-breakdown-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem}#work .test-breakdown-item{padding:1rem;border:1px solid var(--border);border-radius:8px}#work .test-breakdown-item h3{font-size:1rem;margin:0 0 .25rem}#work .test-breakdown-item p{font-size:.9rem;color:var(--muted);margin:0 0 .5rem}#work .test-evidence{font-size:.85rem;font-weight:600}#work .test-note{color:var(--muted);font-size:.9rem}@media(max-width:650px){#work .test-breakdown-grid{grid-template-columns:1fr}}
+
+/* Consistent, unshaded project cards with readable text in both states */
+#work .project-card,
+#work .project-card[open],
+#work .project-card[open] summary {
+  background: var(--surface);
+}
+#work .project-card[open] {
+  box-shadow: none;
+}
+#work .project-card summary .project-card-intro {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+#work .project-card summary .technology {
+  font-size: .92rem;
+}
+#work .project-card .project-story {
+  font-size: 1rem;
+}
+#work .project-card .project-story p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+#work .project-card .project-story .test-breakdown-item p,
+#work .project-card .project-story .test-note,
+#work .project-card .project-story .story-facts span {
+  font-size: .94rem;
+}
 </style>
 </head>
 
