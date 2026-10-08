@@ -123,6 +123,9 @@
 #work .project-card summary .project-card-intro {font-size:1.0625rem;line-height:1.65}
 #work .project-card .project-story h2 {font-size:1.1875rem;line-height:1.4;font-weight:600}
 #work .project-card .project-story .test-breakdown h2 {font-size:1.1875rem;font-weight:600}
+
+/* Real project evidence image */
+.project-visual{margin:2rem 0 2.25rem;max-width:100%}.project-visual a{display:block;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:var(--surface)}.project-visual img{display:block;width:100%;height:auto;object-fit:contain}.project-visual figcaption{margin-top:.7rem;font-size:.9rem;line-height:1.6;color:var(--muted)}.project-visual figcaption strong{color:var(--text)}.project-visual a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 </style>
 </head>
 
@@ -293,6 +296,7 @@
 <p>I directed the problem-solving, requirements, testing priorities, architectural choices, review, and validation. AI accelerated implementation, investigation, and documentation. The aim was not to automate every possible activity; it was to get useful evidence quickly and know whether to trust it.</p>
 <p>The timeline was short. My first Justifacts interview was on September 10, 2026. I committed the initial application and Playwright UI suite that afternoon, separated the black-box tests into their own repository and added CI on September 11, and had an onsite interview scheduled for September 16. That is less than a week from the initial interview to the onsite. I shared the initial proof of concept during the interview process and discussed the project and its approach with the team during the onsite interview. They seemed receptive to the ideas, although time constraints prevented a live demonstration. I continued developing the project independently afterward. The capabilities below reflect the current repositories, not necessarily what existed at the time of that conversation.</p>
 
+<figure class="project-visual"><a href="https://raw.githubusercontent.com/frankfulcomer/workflow-tracker/main/docs/screenshot.png" target="_blank" rel="noopener noreferrer" aria-label="View full-size Workflow Tracker application screenshot"><img src="https://raw.githubusercontent.com/frankfulcomer/workflow-tracker/main/docs/screenshot.png" alt="Workflow Tracker application showing work items and a detail view with status history" loading="lazy" decoding="async"></a><figcaption><strong>Workflow Tracker in use.</strong> The application provides real work-item and status-history behavior for independent UI, API, and database verification. Select the image to view it full size.</figcaption></figure>
 <h2>Making the behavior testable</h2>
 <p>The project grew from a simple application idea into six lightweight user stories with numbered acceptance criteria, shared interface conventions, and explicit scope boundaries. Tests are mapped back to expected behavior, making it possible to discuss coverage in terms of requirements rather than just test counts.</p>
 <p>Testing also improved the requirements. Exploring invalid owner identifiers, blank titles, and unassigned work items exposed behaviors that had not been specified. Those gaps became acceptance criteria before corresponding regression tests were added.</p>
