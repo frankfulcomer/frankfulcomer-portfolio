@@ -450,3 +450,69 @@ footer nav a {
         padding: 1.25rem;
     }
 }
+
+
+/* Expandable featured-project stories */
+.project-story-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+}
+.project-card {
+    min-width: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.project-card[open] {
+    grid-column: 1 / -1;
+    border-color: #a8bfce;
+}
+.project-card summary {
+    display: block;
+    padding: 1.75rem;
+    cursor: pointer;
+    list-style: none;
+}
+.project-card summary::-webkit-details-marker { display: none; }
+.project-card summary:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: -4px;
+}
+.project-card-heading {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+.project-card .technology {
+    display: block;
+    margin: 0.4rem 0 1rem;
+}
+.project-summary { display: block; }
+.project-toggle {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--accent);
+    font-weight: 600;
+}
+.project-card .when-open { display: none; }
+.project-card[open] .when-open { display: inline; }
+.project-card[open] .when-closed { display: none; }
+.project-story {
+    border-top: 1px solid var(--border);
+    padding: 0.5rem 1.75rem 1.75rem;
+    max-width: 100%;
+}
+.project-story section { max-width: 75ch; }
+.project-story h2 {
+    margin: 1.8rem 0 0.5rem;
+    font-size: 1.3rem;
+}
+.project-story p { margin: 0 0 1rem; }
+.project-story-link { margin-top: 1.75rem !important; }
+@media (max-width: 680px) {
+    .project-story-grid { grid-template-columns: minmax(0, 1fr); }
+    .project-card summary { padding: 1.25rem; }
+    .project-story { padding: 0.25rem 1.25rem 1.25rem; }
+}
