@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workflow Tracker | Frank Fulcomer</title>
+<meta name="description" content="How an experienced QA engineer used AI-assisted development to establish requirements, layered test automation, and CI around a realistic application.">
+<link rel="canonical" href="https://frankfulcomer.me/workflow-tracker.html">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="stylesheet" href="styles.css">
+<style>
+.project-story{max-width:800px;margin:auto}.project-story h1{font-size:clamp(2rem,4vw,3rem)}.project-story h2{margin-top:2.7rem;font-size:1.55rem}.project-story p,.project-story li{font-size:1.04rem}.project-story p{margin:1rem 0}.project-story .lede{font-size:1.22rem;color:var(--muted)}.project-story .eyebrow{color:var(--accent);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.85rem}.project-story .repo-links{display:flex;gap:1.5rem;flex-wrap:wrap;margin:1.5rem 0 2.5rem}.project-story .detail{border-left:3px solid var(--border);padding-left:1.25rem}.project-story .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0}.project-story .facts div{border-top:2px solid var(--border);padding-top:.75rem}.project-story .facts strong{display:block;font-size:1.5rem}.project-story .facts span{color:var(--muted);font-size:.9rem}@media(max-width:600px){.project-story .facts{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="hero" style="padding:2rem 0"><div class="container"><a href="/#work">← Back to featured work</a></div></header>
+<main id="main" class="section"><div class="container"><div class="project-story">
+<p class="eyebrow">Project story · QA engineering · AI-assisted development</p>
+<h1>Workflow Tracker: Building a QA Foundation with AI</h1>
+<p class="lede">An interview challenge became an experiment in how quickly an experienced QA engineer could establish meaningful testing capability with AI assistance—without pretending to be an experienced application developer.</p>
+<div class="repo-links"><a href="https://github.com/frankfulcomer/workflow-tracker-tests">Explore the QA repository ↗</a><a href="https://github.com/frankfulcomer/workflow-tracker">View the application ↗</a></div>
+<h2>The situation</h2>
+<p>During an interview process, I learned that a small software team needed to establish QA practices and automation largely from the ground up. The need was bigger than a handful of test scripts: requirements, coverage, repeatable regression testing, and an approach the team could maintain.</p>
+<p>I wanted to demonstrate how I would tackle that work. But a meaningful testing demonstration needs something realistic to test. Building an application, its documentation, and a testing system by hand would take more time than an interview proof of concept justified.</p>
+<p>My experience was in software quality, systems, and requirements—not professional Java application development. I was also learning parts of the automation toolchain. AI offered a way to close that implementation gap while applying the judgment I already had.</p>
+<h2>The approach</h2>
+<p>I used ChatGPT and Claude Code to help create a small workflow application: work items can be assigned to owners, edited, moved through defined statuses, and reviewed through their status history. The application was never the main deliverable. It was a controllable, realistic system against which to demonstrate QA engineering.</p>
+<p>I directed the problem-solving, requirements, testing priorities, architectural choices, review, and validation. AI accelerated implementation, investigation, and documentation. The aim was not to automate every possible activity; it was to get useful evidence quickly and know whether to trust it.</p>
+<p>The initial interview proof of concept continued to evolve afterward. The capabilities described below reflect the current repositories, not a claim that every feature was completed during the original interview preparation.</p>
+<div class="facts"><div><strong>6</strong><span>Documented product stories</span></div><div><strong>30</strong><span>Automated regression tests</span></div><div><strong>3</strong><span>Independent verification layers</span></div></div>
+<h2>Making the behavior testable</h2>
+<p>The project grew from a simple application idea into six lightweight user stories with numbered acceptance criteria, shared interface conventions, and explicit scope boundaries. Tests are mapped back to expected behavior, making it possible to discuss coverage in terms of requirements rather than just test counts.</p>
+<p>Testing also improved the requirements. Exploring invalid owner identifiers, blank titles, and unassigned work items exposed behaviors that had not been specified. Those gaps became acceptance criteria before corresponding regression tests were added.</p>
+<h2>Choosing the right kind of testing</h2>
+<p>The QA system lives in its own repository and treats the application as a black box. Browser tests check user interaction and representative workflows. API tests check business rules and service responses. Read-only SQL checks verify what was actually persisted in the database—even when an application response appears correct.</p>
+<p>Manual testing still has a place. An early set of 27 scripted manual cases was refined to six meaningful user workflows. Repetitive, deterministic checks moved to automation; open-ended questions moved to an exploratory testing charter. The goal was less duplicated effort, not less confidence.</p>
+<h2>Putting regression into the workflow</h2>
+<p>GitHub Actions builds the application on changes to its main branch. After a successful build, it triggers the separate QA repository with the exact application commit identifier. The test workflow starts that revision of the application, runs the UI, API, and database tests, and saves reports and logs.</p>
+<p>That separation matters: the tests don't rely on the application's internal classes, and the regression run is tied to the revision that triggered it—not whichever revision happens to be latest later.</p>
+<h2>What the failures taught me</h2>
+<p>One browser test consistently passed locally and failed in CI. Rather than adding an arbitrary delay or weakening the assertion, I compared execution evidence and traced the problem to closely spaced form submissions and asynchronous handling. The test synchronization was corrected in the shared Page Object; the underlying application risk was recorded separately for future work.</p>
+<p>Other findings were deliberately documented rather than immediately fixed, including an API error response that exposed an internal Java type. Not every discovery needs to become an unplanned change to the current scope.</p>
+<h2>What I took away</h2>
+<p>AI made it practical to move from an interview problem to a working QA demonstration despite limited familiarity with parts of the development stack. But speed alone was not the measure of success. Requirements still needed scrutiny, test results needed investigation, and the work needed boundaries.</p>
+<p>For me, the lasting lesson is that AI can expand implementation capacity while experienced QA judgment determines what to build, what to verify, and when the evidence is good enough.</p>
+<p class="detail">For source code, architecture decisions, acceptance criteria, traceability, test cases, and CI configuration, start with the <a href="https://github.com/frankfulcomer/workflow-tracker-tests">QA repository</a>. The <a href="https://github.com/frankfulcomer/workflow-tracker">application repository</a> contains the test target and product stories.</p>
+<p class="back-to-top"><a href="/#work">← Return to featured work</a></p>
+</div></div></main>
+<footer><div class="container footer-inner"><p class="footer-note">© 2026 Frank Fulcomer</p></div></footer>
+</body></html>
