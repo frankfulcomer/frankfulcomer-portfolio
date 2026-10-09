@@ -6,7 +6,7 @@ Focused stabilization of the published homepage and Workflow Tracker, Job Search
 Hub, Conductor, and Personal Portfolio pages. Baseline source revision:
 `20230350be544a2e2c4ffa641769a910e6710489`.
 
-The tested behavior passed, with one minor caption-navigation consistency defect
+The tested behavior passed, with caption-navigation consistency and cached-stylesheet defects
 fixed and one external destination blocked from automated verification. This is
 a proportionate browser baseline, not comprehensive accessibility or browser
 certification. Application and test repositories were not changed.
@@ -88,6 +88,14 @@ caption source blocks used block layout; all evidence images loaded and no
 console warning/error entries were returned. Matching homepage/dedicated
 figures were retained. Final public smoke checks accompany publication of this
 report; the publication commit identifies the tested final files.
+
+**P2 — returning-browser stylesheet cache.** The first public smoke test loaded
+new HTML but retained the previous stylesheet, leaving caption source links
+inline on three dedicated pages. Images and navigation still worked, but the
+published consistency fix was not reliably visible. Expected: the current
+stylesheet accompanies the current pages. Fixed: versioned the stylesheet URL
+on all five pages, without adding tooling or changing the design. The corrected
+public smoke test verifies caption blocks, image loading, and overflow.
 
 ## Limitations and participation still needed
 
