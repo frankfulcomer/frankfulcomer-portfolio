@@ -516,3 +516,7 @@ footer nav a {
     .project-card summary { padding: 1.25rem; }
     .project-story { padding: 0.25rem 1.25rem 1.25rem; }
 }
+
+/* Consistent evidence-caption navigation across project stories. */
+.project-visual-source { display: block; margin-top: .35rem; }
+.project-visual figcaption .project-visual-source a { display: inline; border: 0; border-radius: 0; background: none; overflow: visible; text-decoration: underline; text-underline-offset: 2px; }
