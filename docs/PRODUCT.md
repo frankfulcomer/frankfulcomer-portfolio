@@ -80,12 +80,12 @@ software quality, system testing, requirements-based verification, test automati
 and regulated healthcare software, now extending that experience into software
 development and AI-assisted engineering."
 
-Likely featured projects:
+Published featured projects:
 
-- Job Search Hub
-- Job Search Hub Tests
+- Workflow Tracker
+- Job Search Hub (with its independent test repository)
 - AI Development Workflow / Conductor
-- QA Automation Framework
+- Personal Portfolio
 
 Implementation specifics (layout, copy, markup) are intentionally not fixed
 here; this document records direction and constraints, not a spec.
